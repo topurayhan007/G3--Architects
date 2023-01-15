@@ -1,4 +1,5 @@
 /* =======Common Section======== */
+
 * {
   font-family: "Work Sans", sans-serif;
 }
@@ -36,12 +37,14 @@ main,
 }
 
 /* =======Header Section======== */
+
 .header {
   background: rgba(255, 144, 14, 0.1);
   padding-top: 50px;
 }
 
 /* =======Navigation Section======== */
+
 nav {
   height: 53px;
   display: flex;
@@ -68,6 +71,7 @@ ul li {
 }
 
 /* =======Banner Section======== */
+
 .banner {
   margin-top: 100px;
   display: flex;
@@ -132,6 +136,7 @@ ul li {
 }
 
 /* =======Features Section======== */
+
 .features {
   margin-top: 130px;
   position: relative;
@@ -201,14 +206,135 @@ ul li {
   color: #ffffff;
 }
 
+/* =======Facts Section======== */
+
+.facts {
+  margin-top: 130px;
+}
+.facts > .section-description {
+  width: 540px;
+}
+.facts-flex-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 124px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.fact {
+  text-align: center;
+  padding: 35px 45px;
+  border: 2px solid #ff900e;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.fact:hover {
+  transform: scale(1.2);
+  animation: wiggle 0.5s linear 1;
+}
+/* Animation */
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.fact-numbers {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 53px;
+  text-align: center;
+  color: #424242;
+}
+.fact-info {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  color: #727272;
+}
+
+/* =======Architectures Section======== */
+
+.architectures {
+  margin-top: 130px;
+  text-align: center;
+}
+.architecture-image-container {
+  margin-top: 50px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+}
+.grid-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+.grid-container:nth-child(4) {
+  grid-column: 1;
+}
+.grid-container:nth-child(5) {
+  display: flex;
+  align-items: center;
+  grid-column: 2;
+}
+.grid-container:nth-child(6) {
+  grid-column: 3;
+}
+
+/* =======Sponsors Section======== */
+
+.sponsors {
+  margin-top: 180px;
+  text-align: center;
+}
+.sponsors-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 155px;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+}
+.sponsors-image {
+  mix-blend-mode: luminosity;
+}
+
+/* =======Footer Section======== */
+
+.footer {
+  margin-top: 130px;
+  margin-bottom: 216px;
+  background: #fff4e7;
+  border-radius: 8px;
+  text-align: center;
+}
+.footer > p {
+  padding: 30px 400px;
+}
+
 /* =======Media Queries======== */
 
 @media only screen and (max-width: 576px) {
   /* =======Common Section======== */
-
+  body {
+    margin: 0;
+  }
   main,
   .header-container {
     width: 100%;
+    margin: 0 auto;
   }
 
   /* =======Header Section======== */
@@ -246,6 +372,9 @@ ul li {
   .quicklist-info-container {
     margin: auto 25px;
   }
+  .team-image {
+    width: 100%;
+  }
 
   /* =======Features Section======== */
   .features {
@@ -266,5 +395,59 @@ ul li {
     position: relative;
     margin-top: 30px;
     left: 0%;
+  }
+
+  /* =======Facts Section======== */
+  .facts {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .facts > .section-description {
+    width: 100%;
+  }
+  .facts-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+  }
+
+  /* =======Architectures Section======== */
+  .architectures {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .architecture-image-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 30px;
+  }
+  .grid-container:nth-child(4) {
+    grid-column: auto;
+  }
+  .grid-container:nth-child(5) {
+    order: -1;
+    grid-column: auto;
+  }
+  .grid-container:nth-child(6) {
+    grid-column: auto;
+  }
+
+  /* =======Sponsors Section======== */
+
+  .sponsors {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .sponsors-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 50px;
+  }
+
+  /* =======Footer Section======== */
+
+  .footer {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .footer > p {
+    padding: 10px 10px;
   }
 }
